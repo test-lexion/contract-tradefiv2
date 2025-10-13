@@ -1,0 +1,58 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "ReentrancyGuardReentrantCall",
+				"type": "error"
+			}
+		],
+		"devdoc": {
+			"details": "Contract module that helps prevent reentrant calls to a function. Inheriting from `ReentrancyGuard` will make the {nonReentrant} modifier available, which can be applied to functions to make sure there are no nested (reentrant) calls to them. Note that because there is a single `nonReentrant` guard, functions marked as `nonReentrant` may not call one another. This can be worked around by making those functions `private`, and then adding `external` `nonReentrant` entry points to them. TIP: If EIP-1153 (transient storage) is available on the chain you're deploying at, consider using {ReentrancyGuardTransient} instead. TIP: If you would like to learn more about reentrancy and alternative ways to protect against it, check out our blog post https://blog.openzeppelin.com/reentrancy-after-istanbul/[Reentrancy After Istanbul].",
+			"errors": {
+				"ReentrancyGuardReentrantCall()": [
+					{
+						"details": "Unauthorized reentrant call."
+					}
+				]
+			},
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contract/StakingRewards_flattened.sol": "ReentrancyGuard"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contract/StakingRewards_flattened.sol": {
+			"keccak256": "0xd0f133ae5d93b35c54ef74d67dc07da43d5b53b9f0a349cea255cdf4ed8fb949",
+			"urls": [
+				"bzz-raw://c68f7b6a56582b50edb7d2fae04ca156afe6e53c4dc2b362c8e1f605d13b6665",
+				"dweb:/ipfs/QmQ3fbiUenFpMTzKmEhr1qUB8DbQ2aTsau9k1kmP6Z2HJJ"
+			]
+		}
+	},
+	"version": 1
+}

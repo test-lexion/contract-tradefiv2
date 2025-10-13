@@ -1,0 +1,243 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_vaultAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_feeWallet",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "tokenA",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "tokenB",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newPrice",
+						"type": "uint256"
+					}
+				],
+				"name": "PriceUpdated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "tokenFrom",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "tokenTo",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amountFrom",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amountTo",
+						"type": "uint256"
+					}
+				],
+				"name": "TradeExecuted",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "assetVault",
+				"outputs": [
+					{
+						"internalType": "contract AssetVault",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tokenFrom",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_tokenTo",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amountFrom",
+						"type": "uint256"
+					}
+				],
+				"name": "executeTrade",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "feeBps",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "feeWallet",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "prices",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tokenA",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_tokenB",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
+					}
+				],
+				"name": "setPrice",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Handles the logic for executing spot trades. It is authorized to move funds within the AssetVault.",
+			"kind": "dev",
+			"methods": {
+				"executeTrade(address,address,uint256)": {
+					"details": "Executes a spot trade.",
+					"params": {
+						"_amountFrom": "The amount of tokenFrom the user wants to sell.",
+						"_tokenFrom": "The token the user is selling.",
+						"_tokenTo": "The token the user is buying."
+					}
+				}
+			},
+			"title": "SpotExchange",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contract/SpotExchange_flattened.sol": "SpotExchange"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contract/SpotExchange_flattened.sol": {
+			"keccak256": "0xb5aace6bd2fcedd4cf8e94570f85c9f33258e63d27dd8096a0d36371c6b982c0",
+			"urls": [
+				"bzz-raw://b0e762721150aa89d798d97f8960eddf41fd2fabac6c245f3b99aa734ad13e5f",
+				"dweb:/ipfs/QmU1Qy5d7hWH9pRmpFRCy6e4caFkLpySijyUPwUUWacqTw"
+			]
+		}
+	},
+	"version": 1
+}
