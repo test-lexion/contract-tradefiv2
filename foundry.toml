@@ -1,0 +1,38 @@
+# TradeFi Protocol - Foundry Configuration
+
+[profile.default]
+src = "contract"
+out = "out"
+libs = ["lib"]
+remappings = [
+    "forge-std/=lib/forge-std/src/",
+    "@openzeppelin/=lib/openzeppelin-contracts/"
+]
+
+# See more config options https://github.com/foundry-rs/foundry/tree/master/crates/config
+
+[profile.default.optimizer]
+enabled = true
+runs = 200
+
+[profile.default.model_checker]
+contracts = { "contract/TradeFiToken.sol" = ["TradeFiToken"], "contract/Governance.sol" = ["Governance"] }
+engine = "chc"
+timeout = 10000
+targets = ["assert", "overflow"]
+
+[profile.ci]
+fuzz = { runs = 10000 }
+invariant = { runs = 1000 }
+
+[rpc_endpoints]
+mainnet = "${MAINNET_RPC_URL}"
+sepolia = "${SEPOLIA_RPC_URL}"
+arbitrum = "${ARBITRUM_RPC_URL}"
+polygon = "${POLYGON_RPC_URL}"
+
+[etherscan]
+mainnet = { key = "${ETHERSCAN_API_KEY}" }
+sepolia = { key = "${ETHERSCAN_API_KEY}" }
+arbitrum = { key = "${ARBISCAN_API_KEY}" }
+polygon = { key = "${POLYGONSCAN_API_KEY}" }
