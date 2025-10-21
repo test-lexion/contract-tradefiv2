@@ -1,4 +1,4 @@
-# TradeFi Protocol
+# Trade Protocol
 
 A comprehensive DeFi protocol built on Ethereum, featuring governance, staking, spot trading, and asset management with enhanced security features.
 
